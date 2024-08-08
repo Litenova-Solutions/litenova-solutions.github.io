@@ -8,11 +8,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --litenova-blue: #0A2647;
-            --litenova-gold: #FFC300;
-            --litenova-light-blue: #144272;
             --litenova-dark: #121212;
+            --litenova-gold: #ffce63; /* Exact color from the logo */
             --litenova-muted-gold: rgba(255, 195, 0, 0.15);
+            --litenova-card-bg: rgba(255, 255, 255, 0.05);
+            --litenova-card-border: rgba(255, 255, 255, 0.1);
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -53,12 +53,18 @@
             margin: 0 auto;
         }
         .card {
-            border: none;
+            background-color: var(--litenova-card-bg);
+            border: 1px solid var(--litenova-card-border);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            background-color: var(--litenova-light-blue);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
         .icon-secondary {
-            color: #8ECAE6;
+            color: var(--litenova-gold);
+            opacity: 0.8;
         }
         a {
             color: var(--litenova-gold);
